@@ -1,8 +1,8 @@
 ---
 name: "Chore"
-about: "Open a Chore for minor update."
-title: "Update "
-labels: "type : chore"
+about: "Open a Chore for a minor update."
+title: "[Chore] "
+labels: "type: chore"
 ---
 
 ## Why

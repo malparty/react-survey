@@ -1,7 +1,7 @@
 ---
 name: "Bug Report"
 about: "You found something that is not working. Report it so that it can be fixed. 👷‍"
-title: "Fix: "
+title: "[Bug] Fix: "
 labels: "type: bug"
 ---
 
