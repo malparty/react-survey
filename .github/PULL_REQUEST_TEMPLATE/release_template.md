@@ -2,7 +2,7 @@ Link to the milestone on Github e.g. https://github.com/nimblehq/git-templates/m
 or
 Link to the project management tool for the release
 
-## Features
+## Features 🆕
 
 Provide the ID and title of the issue in the section for each type (feature, chore and bug). The link is optional.
 
@@ -10,8 +10,8 @@ Provide the ID and title of the issue in the section for each type (feature, cho
 or
 - [[ch1234](https://github.com/nimblehq/git-templates/issues/1234)] As a user, I can log in
 
-## Chores
+## Chores 🧹
 - Same structure as in  ## Feature
 
-## Bugs
+## Bugs 🪲
 - Same structure as in  ## Feature

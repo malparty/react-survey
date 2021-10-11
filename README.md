@@ -1,12 +1,15 @@
-# Git Repository Template
+# React Survey - Nimble Internal Certification
 
-Project repository template to set up all public projects at [Nimble](https://nimblehq.co/)
+This project is an internal certification proposed by [Nimble](https://nimblehq.co/).
+It enables me to level up with React and more (OAuth2.0, local application data, SPA, etc...).
 
-## Usage
+## Development
 
 Clone the repository
 
 `git clone git@github.com:nimblehq/git-template.git`
+
+> 🚧 This section is still work in progress...
 
 ## License
 
@@ -25,4 +28,6 @@ We love open source and do our part in sharing our work with the community!
 See [our other projects][community] or [hire our team][hire] to help build your product.
 
 [community]: https://github.com/nimblehq
-[hire]: https://nimblehq.co/
+[hire/jobs]: https://jobs.nimblehq.co/
+[who we are]: https://nimblehq.co/
+[LinkedIn]: https://www.linkedin.com/company/nimblehq
