@@ -36,7 +36,24 @@ yarn test
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Build
+### Lint
+
+```shell
+yarn lint
+```
+
+See warnings and errors from eslint.\
+The configuration is inherited from Create-React-App and override by [Nimble ES Lint config](https://www.npmjs.com/package/@nimblehq/eslint-config-nimble).
+
+
+```shell
+yarn lint:fix
+```
+
+To run the eslint fix.
+
+
+## Build
 
 ```shell
 yarn build
