@@ -6,6 +6,7 @@ module.exports = {
   plugins: ['stylelint-scss', 'stylelint-order'],
   rules: {
     'order/properties-alphabetical-order': null,
-    'order/properties-order': [sortOrderSmacss({ emptyLineBefore: 'always' })]
+    'order/properties-order': [sortOrderSmacss({ emptyLineBefore: 'always' })],
+    'max-nesting-depth': 3
   }
 }
