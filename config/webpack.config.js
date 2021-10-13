@@ -729,7 +729,7 @@ module.exports = function (webpackEnv) {
           cwd: paths.appPath,
           resolvePluginsRelativeTo: __dirname,
           baseConfig: {
-            extends: [require.resolve('eslint-config-react-app/base'), '@nimblehq/eslint-config-nimble'],
+            extends: ['@nimblehq/eslint-config-nimble'],
             rules: {
               ...(!hasJsxRuntime && {
                 'react/react-in-jsx-scope': 'error',
