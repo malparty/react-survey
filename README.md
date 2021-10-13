@@ -36,17 +36,15 @@ yarn test
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Lint
+### Linters
 
 **TypeScript**
 
-```shell
-yarn lint
-yarn lint:fix
-```
+Eslint rules are used at compile time.\
+Warnings and errors are visible from the console running the `yarn start` command.\
+Errors will also replace the display of the application in the webbrowser.
 
-See warnings and errors from eslint.\
-The configuration is inherited from Create-React-App and override by [Nimble ES Lint config](https://www.npmjs.com/package/@nimblehq/eslint-config-nimble).
+> ℹ️ The configuration is inherited from Create-React-App and override by [Nimble ES Lint config](https://www.npmjs.com/package/@nimblehq/eslint-config-nimble).
 
 **SCSS**
 
@@ -56,15 +54,6 @@ yarn stylelint:fix
 ```
 
 Similar functions for SCSS files using the [StyleLint plugin](https://stylelint.io/).
-
-**Both**
-
-```shell
-yarn codebase:lint
-yarn codebase:fix
-```
-
-To run both linters (eslint & stylelint).
 
 ## Build
 
