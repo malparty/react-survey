@@ -38,20 +38,33 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### Lint
 
+**TypeScript**
+
 ```shell
 yarn lint
+yarn lint:fix
 ```
 
 See warnings and errors from eslint.\
 The configuration is inherited from Create-React-App and override by [Nimble ES Lint config](https://www.npmjs.com/package/@nimblehq/eslint-config-nimble).
 
+**SCSS**
 
 ```shell
-yarn lint:fix
+yarn stylelint
+yarn stylelint:fix
 ```
 
-To run the eslint fix.
+Similar functions for SCSS files using the [StyleLint plugin](https://stylelint.io/).
 
+**Both**
+
+```shell
+yarn codebase:lint
+yarn codebase:fix
+```
+
+To run both linters (eslint & stylelint).
 
 ## Build
 
