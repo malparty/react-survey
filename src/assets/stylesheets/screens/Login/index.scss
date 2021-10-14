@@ -1,0 +1,13 @@
+.login-screen {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr [start] rem(320px) [end] 1fr;
+    grid-template-rows: 1fr [start] rem(250px) [end] 1fr;
+    height: 100vh;
+  }
+
+  &__container {
+    grid-column: start / end;
+    grid-row: start / end;
+  }
+}
