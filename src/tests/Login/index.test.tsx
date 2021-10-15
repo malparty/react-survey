@@ -4,6 +4,7 @@ import LoginScreen from '../../screens/Login';
 describe('<LoginScreen />', () => {
   it('displays a sign in to Nimble message', () => {
     const signInText = 'Sign in to Nimble';
+
     const wrapper = shallow(<LoginScreen />);
 
     expect(wrapper.text()).toContain(signInText);

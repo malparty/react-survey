@@ -4,6 +4,7 @@ import BackgroundImage from '../../../components/BackgroundImage';
 describe('<BackgroundImage />', () => {
   it('renders a single image', () => {
     const wrapper = shallow(<BackgroundImage />);
+
     expect(wrapper.find('img')).toHaveLength(1);
   });
 
