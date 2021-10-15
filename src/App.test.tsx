@@ -10,9 +10,9 @@ import LoginScreen from './screens/Login';
 
 describe('<App />', () => {
   it('renders 2 children (the BackgroundImage and the screen)', () => {
-    const app = shallow(<App />).render()[0];
+    const wrapper = shallow(<App />);
 
-    expect(app.children).toHaveLength(2);
+    expect(wrapper.children()).toHaveLength(2);
   });
 
   it('renders a BackgroundImage', () => {
