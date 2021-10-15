@@ -91,6 +91,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "test:coverage": "node scripts/testCoverage.js",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
     "stylelint": "stylelint '**/*.scss'",
     "stylelint:fix": "stylelint '**/*.scss' --fix"
   },
@@ -171,5 +173,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^8.6.0"
   }
 }
