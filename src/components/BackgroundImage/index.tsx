@@ -5,7 +5,7 @@ export default class BackgroundImage extends PureComponent {
   render() {
     return (
       <div className="background-image">
-        <img className="background-image__img" src={defaultImage} role="presentation" alt="" />
+        <img className="background-image__img" src={defaultImage} role="presentation" alt="" data-testid="background-image" />
       </div>
     );
   }

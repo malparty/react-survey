@@ -1,23 +1,23 @@
-import { shallow } from 'enzyme';
+import {render} from '@testing-library/react'
 import BackgroundImage from '../../../components/BackgroundImage';
 
 describe('<BackgroundImage />', () => {
   it('renders a single image', () => {
-    const wrapper = shallow(<BackgroundImage />);
+    const backgroundImage = render(<BackgroundImage />);
 
-    expect(wrapper.find('img')).toHaveLength(1);
+    expect(backgroundImage.getAllByTestId('background-image')).toHaveLength(1);
   });
 
   it('renders a role presentation image', () => {
-    const wrapper = shallow(<BackgroundImage />);
+    const backgroundImage = render(<BackgroundImage />);
 
-    expect(wrapper.find('img').first().props().role).toEqual('presentation');
+    expect(backgroundImage.getByTestId('background-image')).toHaveAttribute('role', 'presentation');
   });
 
   it('contains a non empty src attribute', () => {
-    const wrapper = shallow(<BackgroundImage />);
+    const backgroundImage = render(<BackgroundImage />);
+    const image = backgroundImage.getByTestId('background-image');
 
-    expect(wrapper.find('img').first().props().src).not.toBeUndefined();
-    expect(wrapper.find('img').first().props().src).not.toEqual('');
+    expect(image).toHaveAttribute('src', expect.stringMatching(/.+/));
   });
 });
