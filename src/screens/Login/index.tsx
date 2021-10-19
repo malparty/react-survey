@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import { PureComponent } from 'react';
 
 const LOGIN_SCREEN_CLASS = 'login-screen';
 

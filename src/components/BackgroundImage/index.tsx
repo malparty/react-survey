@@ -1,5 +1,5 @@
-import React, { PureComponent } from 'react';
-import defaultImage from '../../assets/images/default-background.jpg';
+import { PureComponent } from 'react';
+import defaultImage from '@assets/images/default-background.jpg';
 
 export default class BackgroundImage extends PureComponent {
   render() {
