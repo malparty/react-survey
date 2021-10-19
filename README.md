@@ -1,15 +1,70 @@
 # React Survey - Nimble Internal Certification
 
-This project is an internal certification proposed by [Nimble](https://nimblehq.co/).
+This project is an internal certification proposed by [Nimble](https://nimblehq.co/).\
 It enables me to level up with React and more (OAuth2.0, local application data, SPA, etc...).
 
 ## Development
 
-Clone the repository
+### Clone the repository
 
-`git clone git@github.com:nimblehq/git-template.git`
+**GitHub CLI**\
+`gh repo clone malparty/react-survey`
 
-> 🚧 This section is still work in progress...
+**git cli**\
+`git clone git@github.com:malparty/react-survey.git`
+
+> ℹ️ This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### Watch
+
+```shell
+yarn start
+```
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### Run the tests
+
+```shell
+yarn test
+```
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### Linters
+
+**TypeScript**
+
+Eslint rules are used at compile time.\
+Warnings and errors are visible from the console running the `yarn start` command.\
+Errors will also replace the display of the application in the webbrowser.
+
+> ℹ️ The configuration is inherited from Create-React-App and override by [Nimble ES Lint config](https://www.npmjs.com/package/@nimblehq/eslint-config-nimble).
+
+**SCSS**
+
+```shell
+yarn stylelint
+yarn stylelint:fix
+```
+
+Similar functions for SCSS files using the [StyleLint plugin](https://stylelint.io/).
+
+## Build
+
+```shell
+yarn build
+```
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified, and the filenames include the hashes.\
 
 ## License
 
