@@ -14,3 +14,20 @@ $body-bg: rgba(0, 0, 0, 0);
 $body-color: $white;
 
 $zindex-behind: -1;
+
+$font-size-base: 1rem !default;                   // 17px set in base/layouts.scss
+$font-size-sm: $font-size-base * 0.882 !default;  // 15px
+
+$line-height-base: 1.294 !default; // 22px
+$line-height-sm: 1.333 !default;   // 20px
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 800 !default;
+$font-weight-bolder: 850 !default;
+
+$btn-border-radius: 0.588rem;    // 10px
+
+$input-border-radius: 0.706rem; // 12px
+$input-padding-y: 1.118rem;     // 19px
+$input-padding-x: 0.706rem;     // 12px
