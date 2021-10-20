@@ -7,8 +7,10 @@ $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-900: #15151a !default;
 $black: #000;
 
-$body-bg: $black;
+$body-bg: rgba(0, 0, 0, 0);
 $body-color: $white;
+
+$zindex-background-image: -1;

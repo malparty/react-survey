@@ -1,11 +1,26 @@
 .background-image {
+  display: grid;
+  position: absolute;
+  z-index: $zindex-background-image;
+
   &__img {
-    position: absolute;
+    grid-column: 1;
+    grid-row: 1;
+
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+  }
 
-    opacity: 0.25;
-    filter: blur(1rem);
+  &::after {
+    content: '';
+
+    grid-column: 1;
+    grid-row: 1;
+    width: 100vw;
+    height: 100vh;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, $black 100%);
+    backdrop-filter: blur(1.75rem);
   }
 }
