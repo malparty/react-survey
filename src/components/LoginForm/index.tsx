@@ -2,6 +2,7 @@ import { PureComponent } from 'react';
 import nimbleLogo from '@assets/images/nimble-logo.png';
 import { Formik, Field, Form, FormikHelpers, FormikErrors, FormikTouched } from 'formik';
 import * as Yup from 'yup';
+import BaseAlert from '../BaseAlert';
 
 interface LoginFormValues {
   email: string;
@@ -44,10 +45,10 @@ export default class LoginForm extends PureComponent {
           {({ errors, touched }) => (
             <Form>
               {this.hasError(errors, touched) && (
-                <div className="login-form__errors">
-                  {errors.email && touched.email ? <p>{errors.email}</p> : null}
-                  {errors.password && touched.password ? <p>{errors.password}</p> : null}
-                </div>
+                <BaseAlert>
+                  {errors.email && touched.email ? <div>{errors.email}</div> : null}
+                  {errors.password && touched.password ? <div>{errors.password}</div> : null}
+                </BaseAlert>
               )}
               <div className="login-form__field">
                 <label className="login-form__label">Email</label>

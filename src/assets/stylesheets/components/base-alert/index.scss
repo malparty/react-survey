@@ -1,0 +1,25 @@
+.base-alert {
+  display: flex;
+  margin-top: map-get($spacers, 4);
+
+  &__icon {
+    padding: rem(3px);
+  }
+
+  &__content {
+    margin-left: 1rem;
+  }
+
+  &__content-title {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-sm;
+  }
+
+  &__content-message {
+    opacity: $_text-secondary-opacity;
+
+    font-size: $_font-size-xs;
+    line-height: $_line-height-xs;
+  }
+}
