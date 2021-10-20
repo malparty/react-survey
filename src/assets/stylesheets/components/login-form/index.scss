@@ -1,4 +1,7 @@
 .login-form {
+  display: flex;
+  flex-direction: column;
+
   &__field {
     margin-top: rem(24px);
 
@@ -19,5 +22,18 @@
     font-size: $font-size-sm;
     font-weight: $font-weight-bold;
     line-height: $line-height-sm;
+  }
+
+  &__header-image {
+    align-self: center;
+    height: rem(40px);
+  }
+
+  &__header-title {
+    margin-top: rem(24px);
+
+    opacity: $_text-secondary-opacity;
+
+    text-align: center;
   }
 }

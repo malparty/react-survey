@@ -1,3 +1,7 @@
 .btn {
   padding-top: $_input-btn-padding-top;
+
+  &-light {
+    color: $gray-900;
+  }
 }

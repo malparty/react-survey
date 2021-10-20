@@ -1,9 +1,12 @@
 import { PureComponent } from 'react';
+import nimbleLogo from '@assets/images/nimble-logo.png';
 
 export default class LoginForm extends PureComponent {
   render() {
     return (
       <div className="login-form">
+        <img className="login-form__header-image" src={nimbleLogo} alt="Nimble Logo" />
+        <div className="login-form__header-title">Sign in to Nimble</div>
         <form>
           <div className="login-form__field">
             <label className="login-form__label">Email</label>
@@ -14,7 +17,9 @@ export default class LoginForm extends PureComponent {
             <input className="login-form__input form-control" type="password" />
           </div>
           <div className="login-form__field">
-            <button className="btn btn-light" type="submit">Sign in</button>
+            <button className="btn btn-light" type="submit">
+              Sign in
+            </button>
           </div>
         </form>
       </div>

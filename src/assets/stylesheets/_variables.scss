@@ -15,17 +15,16 @@ $body-color: $white;
 
 $zindex-behind: -1;
 
-$font-size-base: 1rem !default;       // 16px
+$font-size-base: 1rem !default; // 16px
 
 $_font-size-base: 1.0625rem !default; // 17px
-$_line-height-base: 1.2941 !default;  // 22px
+$_line-height-base: 1.2941 !default; // 22px
 
-$font-size-sm: 0.9375rem !default;    // 15px
-$line-height-sm: 1.333 !default;      // 20px
+$font-size-sm: 0.9375rem !default; // 15px
+$line-height-sm: 1.333 !default; // 20px
 
-$_font-size-xs: 0.8125rem !default;   // 13px
-$line-height-xs: 1.3846 !default;     // 18px
-
+$_font-size-xs: 0.8125rem !default; // 13px
+$line-height-xs: 1.3846 !default; // 18px
 
 $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
@@ -34,10 +33,14 @@ $font-weight-bolder: 850 !default;
 
 $input-btn-font-size: $_font-size-base;
 $input-btn-line-height: $_line-height-base;
-$input-btn-padding-y: 0.875rem;     // 14px
-$_input-btn-padding-top: 1.25rem;   // 20px
-$input-btn-padding-x: 0.75rem;      // 12px
+$input-btn-padding-y: 0.875rem; // 14px
+$_input-btn-padding-top: 1.25rem; // 20px
+$input-btn-padding-x: 0.75rem; // 12px
 
-$btn-border-radius: 0.588rem;       // 10px
+$btn-border-radius: 0.588rem; // 10px
 
-$input-border-radius: 0.706rem;     // 12px
+$input-border-radius: 0.706rem; // 12px
+$input-bg: rgba(100%, 100%, 100%, 0.18);
+$input-border-width: 0;
+
+$_text-secondary-opacity: 0.6;
