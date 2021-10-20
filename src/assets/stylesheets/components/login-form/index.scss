@@ -5,6 +5,12 @@
     > * + * {
       margin-top: rem(8px);
     }
+
+    .btn {
+      width: 100%;
+
+      font-weight: $font-weight-bold;
+    }
   }
 
   &__label {
@@ -13,9 +19,5 @@
     font-size: $font-size-sm;
     font-weight: $font-weight-bold;
     line-height: $line-height-sm;
-  }
-
-  &__input {
-
   }
 }
