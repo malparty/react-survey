@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import App from './App';
 
-describe('<App />', () => {
+describe('App', () => {
   it('renders a BackgroundImage', () => {
     const app = render(<App />);
 

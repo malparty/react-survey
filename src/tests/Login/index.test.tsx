@@ -1,7 +1,9 @@
 import { render } from '@testing-library/react';
 import LoginScreen from '../../screens/Login';
 
-describe('<LoginScreen />', () => {
+describe('LoginScreen', () => {
+  const screenClass = 'login-screen';
+
   it('displays a sign in to Nimble message', () => {
     const signInText = 'Sign in to Nimble';
 
@@ -11,16 +13,12 @@ describe('<LoginScreen />', () => {
   });
 
   it('adds the screen class to body', () => {
-    const screenClass = 'login-screen';
-
     render(<LoginScreen />);
 
     expect(document.body.classList).toContain(screenClass);
   });
 
   it('removes the screen class from body when unmounting', () => {
-    const screenClass = 'login-screen';
-
     const loginScreen = render(<LoginScreen />);
     loginScreen.unmount();
 
