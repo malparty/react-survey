@@ -25,8 +25,19 @@ export default class LoginForm extends PureComponent {
     setSubmitting(false);
   }
 
-  hasError(errors: FormikErrors<LoginFormValues>, touched: FormikTouched<LoginFormValues>): boolean {
-    return Reflect.ownKeys(errors).some((key) => Reflect.get(errors, key) && Reflect.get(touched, key));
+  getErrorMessages(errors: FormikErrors<LoginFormValues>, touched: FormikTouched<LoginFormValues>): JSX.Element[] {
+    const errorMessages = Reflect.ownKeys(errors).map((key) => {
+      return (
+        Reflect.get(errors, key) &&
+        Reflect.get(touched, key) && <div key={key.toString()}> {Reflect.get(errors, key)}</div>
+      );
+    });
+    return errorMessages.filter((error) => error);
+  }
+
+  renderErrors(errors: FormikErrors<LoginFormValues>, touched: FormikTouched<LoginFormValues>): JSX.Element | null {
+    const errorMessages = this.getErrorMessages(errors, touched);
+    return errorMessages.length > 0 ? <BaseAlert>{errorMessages}</BaseAlert> : null;
   }
 
   render() {
@@ -44,12 +55,7 @@ export default class LoginForm extends PureComponent {
         >
           {({ errors, touched }) => (
             <Form>
-              {this.hasError(errors, touched) && (
-                <BaseAlert>
-                  {errors.email && touched.email ? <div>{errors.email}</div> : null}
-                  {errors.password && touched.password ? <div>{errors.password}</div> : null}
-                </BaseAlert>
-              )}
+              {this.renderErrors(errors, touched)}
               <div className="login-form__field">
                 <label className="login-form__label" htmlFor="email">
                   Email

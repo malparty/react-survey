@@ -5,6 +5,8 @@ interface Props {
   children: React.ReactNode;
 }
 
+export const MESSAGE_TEST_ID = 'base-alert-message';
+
 export default class BaseAlert extends PureComponent<Props> {
   render() {
     return (
@@ -14,7 +16,7 @@ export default class BaseAlert extends PureComponent<Props> {
         </div>
         <div className="base-alert__content">
           <h5 className="base-alert__content-title">Error</h5>
-          <div className="base-alert__content-message" data-test-id="base-alert-message">
+          <div className="base-alert__content-message" data-test-id={MESSAGE_TEST_ID}>
             {this.props.children}
           </div>
         </div>
