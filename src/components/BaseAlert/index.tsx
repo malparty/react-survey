@@ -14,7 +14,9 @@ export default class BaseAlert extends PureComponent<Props> {
         </div>
         <div className="base-alert__content">
           <h5 className="base-alert__content-title">Error</h5>
-          <div className="base-alert__content-message">{this.props.children}</div>
+          <div className="base-alert__content-message" data-test-id="base-alert-message">
+            {this.props.children}
+          </div>
         </div>
       </div>
     );
