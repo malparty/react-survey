@@ -4,7 +4,7 @@ import { Formik, Field, Form, FormikHelpers, FormikErrors, FormikTouched } from 
 import * as Yup from 'yup';
 import BaseAlert from '../BaseAlert';
 
-interface LoginFormValues {
+export interface LoginFormValues {
   email: string;
   password: string;
 }
@@ -19,10 +19,10 @@ const LoginSchema = Yup.object().shape({
 
 export default class LoginForm extends PureComponent {
   async submitLoginForm(values: LoginFormValues, { setSubmitting }: FormikHelpers<LoginFormValues>) {
-    setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
-      setSubmitting(false);
-    }, 500);
+    await new Promise((resolve) => setTimeout(resolve, 2000)); // Will be replaced by API call in BackEnd Task
+
+    alert(JSON.stringify(values, null, 2)); // Will be replaced by authentication & redirection in BackEnd Task
+    setSubmitting(false);
   }
 
   hasError(errors: FormikErrors<LoginFormValues>, touched: FormikTouched<LoginFormValues>): boolean {
@@ -51,11 +51,15 @@ export default class LoginForm extends PureComponent {
                 </BaseAlert>
               )}
               <div className="login-form__field">
-                <label className="login-form__label">Email</label>
+                <label className="login-form__label" htmlFor="email">
+                  Email
+                </label>
                 <Field className="login-form__input form-control" type="email" name="email" id="email" />
               </div>
               <div className="login-form__field">
-                <label className="login-form__label">Password</label>
+                <label className="login-form__label" htmlFor="password">
+                  Password
+                </label>
                 <Field className="login-form__input form-control" type="password" name="password" id="password" />
               </div>
               <div className="login-form__field">

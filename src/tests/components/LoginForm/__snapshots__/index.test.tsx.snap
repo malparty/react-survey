@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm correctly renders 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="login-form"
+      >
+        <img
+          alt="Nimble Logo"
+          class="login-form__header-image"
+          src="nimble-logo.png"
+        />
+        <div
+          class="login-form__header-title"
+        >
+          Sign in to Nimble
+        </div>
+        <form
+          action="#"
+        >
+          <div
+            class="login-form__field"
+          >
+            <label
+              class="login-form__label"
+              for="email"
+            >
+              Email
+            </label>
+            <input
+              class="login-form__input form-control"
+              id="email"
+              name="email"
+              type="email"
+              value=""
+            />
+          </div>
+          <div
+            class="login-form__field"
+          >
+            <label
+              class="login-form__label"
+              for="password"
+            >
+              Password
+            </label>
+            <input
+              class="login-form__input form-control"
+              id="password"
+              name="password"
+              type="password"
+              value=""
+            />
+          </div>
+          <div
+            class="login-form__field"
+          >
+            <button
+              class="btn btn-light"
+              type="submit"
+            >
+              Sign in
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="login-form"
+    >
+      <img
+        alt="Nimble Logo"
+        class="login-form__header-image"
+        src="nimble-logo.png"
+      />
+      <div
+        class="login-form__header-title"
+      >
+        Sign in to Nimble
+      </div>
+      <form
+        action="#"
+      >
+        <div
+          class="login-form__field"
+        >
+          <label
+            class="login-form__label"
+            for="email"
+          >
+            Email
+          </label>
+          <input
+            class="login-form__input form-control"
+            id="email"
+            name="email"
+            type="email"
+            value=""
+          />
+        </div>
+        <div
+          class="login-form__field"
+        >
+          <label
+            class="login-form__label"
+            for="password"
+          >
+            Password
+          </label>
+          <input
+            class="login-form__input form-control"
+            id="password"
+            name="password"
+            type="password"
+            value=""
+          />
+        </div>
+        <div
+          class="login-form__field"
+        >
+          <button
+            class="btn btn-light"
+            type="submit"
+          >
+            Sign in
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

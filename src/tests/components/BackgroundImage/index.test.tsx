@@ -4,6 +4,12 @@ import BackgroundImage from '../../../components/BackgroundImage';
 describe('BackgroundImage', () => {
   const backgroundImageTestId = 'background-image';
 
+  it('correctly renders', () => {
+    const backgroundImage = render(<BackgroundImage />);
+
+    expect(backgroundImage).toMatchSnapshot();
+  });
+
   it('renders a single image', () => {
     const backgroundImage = render(<BackgroundImage />);
 
