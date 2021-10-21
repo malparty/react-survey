@@ -1,7 +1,7 @@
 .background-image {
   display: grid;
   position: absolute;
-  z-index: $zindex-background-image;
+  z-index: $zindex-behind;
 
   &__img {
     grid-column: 1;
