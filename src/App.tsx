@@ -1,20 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import { Component } from 'react';
+import './assets/stylesheets/application.scss';
+import BackgroundImage from './components/BackgroundImage';
+import LoginScreen from './screens/Login';
 
-function App() {
-  return (
-    <div className="application">
-      <header className="application__header">
-        <img src={logo} className="application__logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="application__link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <div className="application">
+        <BackgroundImage />
+        <LoginScreen />
+      </div>
+    );
+  }
 }
-export default App;
