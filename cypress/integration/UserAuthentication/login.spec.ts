@@ -5,17 +5,17 @@ describe('When an unauthenticated user connects to the app', () => {
   const LOGIN_SCREEN_CONTAINER_TEST_ID = 'login-screen-container';
   const ERROR_MESSAGE_TEST_ID = 'base-alert-message';
 
-  it('Successfully loads', () => {
+  it('successfully loads', () => {
     cy.visit('/');
   });
 
-  it('Displays a "Sign in to Nimble" message', () => {
+  it('displays a "Sign in to Nimble" message', () => {
     cy.visit('/');
 
     expect(cy.findByTestId(LOGIN_SCREEN_CONTAINER_TEST_ID).contains('Sign in to Nimble'));
   });
 
-  it('Displays an email error message when the email format is invalid', () => {
+  it('displays an email error message when the email format is invalid', () => {
     cy.visit('/');
 
     cy.findByLabelText('Email').type('no_a_valid@email');
@@ -24,7 +24,7 @@ describe('When an unauthenticated user connects to the app', () => {
     expect(cy.findByTestId(ERROR_MESSAGE_TEST_ID).contains('email'));
   });
 
-  it('Displays an email error message when the email is left unfilled', () => {
+  it('displays an email error message when the email is left unfilled', () => {
     cy.visit('/');
 
     cy.findByLabelText('Email').click();
@@ -33,7 +33,7 @@ describe('When an unauthenticated user connects to the app', () => {
     expect(cy.findByTestId(ERROR_MESSAGE_TEST_ID).contains('email'));
   });
 
-  it('Displays no email error message when the email format is valid', () => {
+  it('displays no email error message when the email format is valid', () => {
     cy.visit('/');
 
     cy.findByLabelText('Email').type('a_valid@email.com');
@@ -42,7 +42,7 @@ describe('When an unauthenticated user connects to the app', () => {
     expect(cy.findByTestId(ERROR_MESSAGE_TEST_ID).should('not.exist'));
   });
 
-  it('Displays a password error message when the password format is too short', () => {
+  it('displays a password error message when the password format is too short', () => {
     cy.visit('/');
 
     cy.findByLabelText('Password').type('short');
@@ -51,7 +51,7 @@ describe('When an unauthenticated user connects to the app', () => {
     expect(cy.findByTestId(ERROR_MESSAGE_TEST_ID).contains('password'));
   });
 
-  it('Displays a password error message when the password format is too long', () => {
+  it('displays a password error message when the password format is too long', () => {
     cy.visit('/');
 
     cy.findByLabelText('Password').type('1234567890123456789012345667890123');
@@ -60,7 +60,7 @@ describe('When an unauthenticated user connects to the app', () => {
     expect(cy.findByTestId(ERROR_MESSAGE_TEST_ID).contains('password'));
   });
 
-  it('Displays no email/password error message when both fields format are valids', () => {
+  it('displays no email/password error message when both fields format are valids', () => {
     cy.visit('/');
 
     cy.findByLabelText('Email').type('a_valid@email.com');
