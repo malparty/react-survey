@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import errorIcon from '@assets/images/icons/icon-error.svg';
 import { useTranslation } from 'react-i18next';
 

@@ -3,6 +3,10 @@
     "error_title": "Error",
     "error_icon_alt": "Error sign icon"
   },
+  "language_switch": {
+    "en": "English",
+    "fr": "French"
+  },
   "login": {
     "title": "Sign in to Nimble",
     "email": "Email",
