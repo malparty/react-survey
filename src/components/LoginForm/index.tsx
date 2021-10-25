@@ -9,16 +9,16 @@ export interface LoginFormValues {
   password: string;
 }
 
-const LoginSchema = Yup.object().shape({
-  email: Yup.string().email('The provided email has an invalid format.').required('Please fill in the email.'),
-  password: Yup.string()
-    .min(8, 'The password should be at least 8 characters long.')
-    .max(32, 'The password cannot be longer than 32 characters.')
-    .required('Please fill in your password.')
-});
-
 const LoginForm = () => {
   const { t } = useTranslation();
+
+  const LoginSchema = Yup.object().shape({
+    email: Yup.string().email(t('login.errors.email_invalid')).required(t('login.errors.email_required')),
+    password: Yup.string()
+      .min(8, t('login.errors.password_too_short'))
+      .max(32, t('login.errors.password_too_long'))
+      .required(t('login.errors.password_required'))
+  });
 
   const submitLoginForm = async (values: LoginFormValues, { setSubmitting }: FormikHelpers<LoginFormValues>) => {
     await new Promise((resolve) => setTimeout(resolve, 2000)); // Will be replaced by API call in BackEnd Task
@@ -29,7 +29,7 @@ const LoginForm = () => {
 
   return (
     <div className="login-form">
-      <img className="login-form__header-image" src={nimbleLogo} alt="Nimble Logo" />
+      <img className="login-form__header-image" src={nimbleLogo} alt={t('login.nimble_logo_alt')} />
       <div className="login-form__header-title">{t('login.title')}</div>
       <Formik
         initialValues={{
@@ -44,19 +44,19 @@ const LoginForm = () => {
             <LoginFormErrors {...formData} />
             <div className="login-form__field">
               <label className="login-form__label" htmlFor="email">
-                Email
+                {t('login.email')}
               </label>
               <Field className="login-form__input form-control" type="email" name="email" id="email" />
             </div>
             <div className="login-form__field">
               <label className="login-form__label" htmlFor="password">
-                Password
+                {t('login.password')}
               </label>
               <Field className="login-form__input form-control" type="password" name="password" id="password" />
             </div>
             <div className="login-form__field">
               <button className="btn btn-light" type="submit">
-                Sign in
+                {t('login.submit')}
               </button>
             </div>
           </Form>
