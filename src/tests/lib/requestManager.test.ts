@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { requestManager, defaultOptions } from '../../lib/requestManager';
+import { requestManager, defaultOptions } from '@src/lib/requestManager';
 
 describe('requestManager', () => {
   const endPoint = 'https://sample-endpoint.com/api/';

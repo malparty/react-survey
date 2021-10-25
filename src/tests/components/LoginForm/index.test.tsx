@@ -1,11 +1,8 @@
-import { render, fireEvent } from '@testing-library/react';
-import LoginForm, { LoginFormValues } from '../../../components/LoginForm';
+import { render } from '@testing-library/react';
+import LoginForm, { LoginFormValues } from '@src/components/LoginForm';
 import { FormikHelpers } from 'formik';
-import BaseAlert, { MESSAGE_TEST_ID as BASE_ALERT_MESSAGE_TEST_ID } from '../../../components/BaseAlert';
 
 describe('LoginForm', () => {
-  const LOGIN_FORM_ERROR_TEST_ID = 'login-form-error';
-
   it('correctly renders', () => {
     const loginForm = render(<LoginForm />);
 

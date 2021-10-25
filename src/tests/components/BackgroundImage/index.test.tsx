@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import BackgroundImage from '../../../components/BackgroundImage';
+import BackgroundImage from '@src/components/BackgroundImage';
 
 describe('BackgroundImage', () => {
   const backgroundImageTestId = 'background-image';

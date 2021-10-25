@@ -10,11 +10,11 @@ export interface LoginFormValues {
 }
 
 const LoginSchema = Yup.object().shape({
-  email: Yup.string().email('The provided email has an invalid format.').required('Please fill in the email'),
+  email: Yup.string().email('The provided email has an invalid format.').required('Please fill in the email.'),
   password: Yup.string()
-    .min(8, 'Passwords are at least 8 chars.')
-    .max(32, 'Password cannot be longer than 32 chars.')
-    .required('Please fill in your password')
+    .min(8, 'The password should be at least 8 characters long.')
+    .max(32, 'The password cannot be longer than 32 characters.')
+    .required('Please fill in your password.')
 });
 
 export default class LoginForm extends PureComponent {

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import BaseAlert from '../../../components/BaseAlert';
+import BaseAlert from '@src/components/BaseAlert';
 
 describe('BaseAlert', () => {
   const BASE_ALERT_MESSAGE_TEST_ID = 'base-alert-message';

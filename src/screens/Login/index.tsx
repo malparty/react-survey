@@ -1,5 +1,5 @@
 import { PureComponent } from 'react';
-import LoginForm from '../../components/LoginForm';
+import LoginForm from '@src/components/LoginForm';
 
 const LOGIN_SCREEN_CLASS = 'login-screen';
 
