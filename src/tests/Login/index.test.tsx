@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import LoginScreen from '../../screens/Login';
+import LoginScreen from '@src/screens/Login';
 
 describe('LoginScreen', () => {
   const screenClass = 'login-screen';
