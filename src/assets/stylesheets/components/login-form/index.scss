@@ -1,0 +1,39 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+
+  &__field {
+    margin-top: map-get($spacers, 4);
+
+    > * + * {
+      margin-top: map-get($spacers, 2);
+    }
+
+    .btn {
+      width: 100%;
+
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__label {
+    display: block;
+
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-sm;
+  }
+
+  &__header-image {
+    align-self: center;
+    height: rem(40px);
+  }
+
+  &__header-title {
+    margin-top: map-get($spacers, 4);
+
+    opacity: $_text-secondary-opacity;
+
+    text-align: center;
+  }
+}

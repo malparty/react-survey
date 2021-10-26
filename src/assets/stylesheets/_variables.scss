@@ -6,11 +6,49 @@ $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
-$gray-800: #343a40 !default;
+$gray-800: #252525 !default;
 $gray-900: #15151a !default;
 $black: #000;
+
+$dark: $gray-800;
 
 $body-bg: rgba(0, 0, 0, 0);
 $body-color: $white;
 
 $zindex-behind: -1;
+
+$font-size-base: 1rem !default; // 16px
+
+$_font-size-base: 1.0625rem !default; // 17px
+$_line-height-base: 1.2941 !default; // 22px
+
+$font-size-sm: 0.9375rem !default; // 15px
+$line-height-sm: 1.333 !default; // 20px
+
+$_font-size-xs: 0.8125rem !default; // 13px
+$_line-height-xs: 1.3846 !default; // 18px
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 800 !default;
+$font-weight-bolder: 850 !default;
+
+$border-radius: 0.706rem; // 12px
+$btn-border-radius: 0.588rem; // 10px
+
+$input-btn-font-size: $_font-size-base;
+$input-btn-line-height: $_line-height-base;
+$input-btn-padding-y: 0.875rem; // 14px
+$_input-btn-padding-top: 1.25rem; // 20px
+$input-btn-padding-x: 0.75rem; // 12px
+
+$input-bg: rgba(100%, 100%, 100%, 0.18);
+$input-border-width: 0;
+
+$_text-secondary-opacity: 0.6;
+
+$alert-padding-y: 1rem; // 16px
+$alert-padding-x: 1rem; // 16px
+$alert-border-width: 0;
+$alert-bg-scale: 0%;
+$alert-color-scale: 0%;

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../App';
+import App from '@src/App';
 
 // mocks react-dom and its render method
 // so that we can assert that render is
