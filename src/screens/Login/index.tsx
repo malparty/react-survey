@@ -16,7 +16,7 @@ export default class LoginScreen extends PureComponent {
   render() {
     return (
       <div className="login-screen__grid">
-        <div className="login-screen__container">
+        <div className="login-screen__container" data-test-id="login-screen-container">
           Sign in to Nimble
           <div>Email</div>
           <div>Password</div>
