@@ -9,14 +9,14 @@ Object {
         class="login-form"
       >
         <img
-          alt="Nimble Logo"
+          alt="login.nimble_logo_alt"
           class="login-form__header-image"
           src="nimble-logo.png"
         />
         <div
           class="login-form__header-title"
         >
-          Sign in to Nimble
+          login.title
         </div>
         <form
           action="#"
@@ -28,7 +28,7 @@ Object {
               class="login-form__label"
               for="email"
             >
-              Email
+              login.email
             </label>
             <input
               class="login-form__input form-control"
@@ -45,7 +45,7 @@ Object {
               class="login-form__label"
               for="password"
             >
-              Password
+              login.password
             </label>
             <input
               class="login-form__input form-control"
@@ -62,7 +62,7 @@ Object {
               class="btn btn-light"
               type="submit"
             >
-              Sign in
+              login.submit
             </button>
           </div>
         </form>
@@ -74,14 +74,14 @@ Object {
       class="login-form"
     >
       <img
-        alt="Nimble Logo"
+        alt="login.nimble_logo_alt"
         class="login-form__header-image"
         src="nimble-logo.png"
       />
       <div
         class="login-form__header-title"
       >
-        Sign in to Nimble
+        login.title
       </div>
       <form
         action="#"
@@ -93,7 +93,7 @@ Object {
             class="login-form__label"
             for="email"
           >
-            Email
+            login.email
           </label>
           <input
             class="login-form__input form-control"
@@ -110,7 +110,7 @@ Object {
             class="login-form__label"
             for="password"
           >
-            Password
+            login.password
           </label>
           <input
             class="login-form__input form-control"
@@ -127,7 +127,7 @@ Object {
             class="btn btn-light"
             type="submit"
           >
-            Sign in
+            login.submit
           </button>
         </div>
       </form>

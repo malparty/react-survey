@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import LoginForm, { LoginFormValues } from '@src/components/LoginForm';
+import LoginForm, { LoginFormValues, submitLoginForm } from '@src/components/LoginForm';
 import { FormikHelpers } from 'formik';
 
 describe('LoginForm', () => {
@@ -11,27 +11,27 @@ describe('LoginForm', () => {
 
   it('displays an email field with its label', () => {
     const loginForm = render(<LoginForm />);
-    expect(loginForm.getByLabelText('Email')).toBeVisible();
+    expect(loginForm.getByLabelText('login.email')).toBeVisible();
   });
 
   it('displays a password field with its label', () => {
     const loginForm = render(<LoginForm />);
 
-    expect(loginForm.getByLabelText('Password')).toBeVisible();
+    expect(loginForm.getByLabelText('login.password')).toBeVisible();
   });
 
   it('displays a Sign In button', () => {
     const loginForm = render(<LoginForm />);
 
-    expect(loginForm.getByText('Sign in')).toBeVisible();
+    expect(loginForm.getByText('login.title')).toBeVisible();
   });
 
   it('calls the setSubmitting callback after submitLoginForn is called', async () => {
-    const loginForm = new LoginForm({});
     const values = { email: 'test@email.com', password: '012345678' };
+
     const formikHelpers = { setSubmitting: jest.fn() } as unknown as FormikHelpers<LoginFormValues>;
 
-    await loginForm.submitLoginForm(values, formikHelpers);
+    await submitLoginForm(values, formikHelpers);
 
     expect(formikHelpers.setSubmitting).toBeCalledWith(false);
   });

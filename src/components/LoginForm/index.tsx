@@ -9,6 +9,13 @@ export interface LoginFormValues {
   password: string;
 }
 
+export const submitLoginForm = async (values: LoginFormValues, { setSubmitting }: FormikHelpers<LoginFormValues>) => {
+  await new Promise((resolve) => setTimeout(resolve, 2000)); // Will be replaced by API call in BackEnd Task
+
+  console.log(JSON.stringify(values, null, 2)); // Will be replaced by authentication & redirection in BackEnd Task
+  setSubmitting(false);
+};
+
 const LoginForm = () => {
   const { t } = useTranslation();
 
@@ -19,13 +26,6 @@ const LoginForm = () => {
       .max(32, t('login.errors.password_too_long'))
       .required(t('login.errors.password_required'))
   });
-
-  const submitLoginForm = async (values: LoginFormValues, { setSubmitting }: FormikHelpers<LoginFormValues>) => {
-    await new Promise((resolve) => setTimeout(resolve, 2000)); // Will be replaced by API call in BackEnd Task
-
-    console.log(JSON.stringify(values, null, 2)); // Will be replaced by authentication & redirection in BackEnd Task
-    setSubmitting(false);
-  };
 
   return (
     <div className="login-form">

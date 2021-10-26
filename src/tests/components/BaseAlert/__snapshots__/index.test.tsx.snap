@@ -12,7 +12,7 @@ Object {
           class="base-alert__icon"
         >
           <img
-            alt="Error icon"
+            alt="base_alert.error_icon_alt"
             src="icon-error.svg"
           />
         </div>
@@ -22,7 +22,7 @@ Object {
           <h5
             class="base-alert__content-title"
           >
-            Error
+            base_alert.error_title
           </h5>
           <div
             class="base-alert__content-message"
@@ -42,7 +42,7 @@ Object {
         class="base-alert__icon"
       >
         <img
-          alt="Error icon"
+          alt="base_alert.error_icon_alt"
           src="icon-error.svg"
         />
       </div>
@@ -52,7 +52,7 @@ Object {
         <h5
           class="base-alert__content-title"
         >
-          Error
+          base_alert.error_title
         </h5>
         <div
           class="base-alert__content-message"

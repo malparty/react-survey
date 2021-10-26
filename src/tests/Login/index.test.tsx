@@ -5,11 +5,9 @@ describe('LoginScreen', () => {
   const screenClass = 'login-screen';
 
   it('displays a sign in to Nimble message', () => {
-    const signInText = 'Sign in to Nimble';
-
     const loginScreen = render(<LoginScreen />);
 
-    expect(loginScreen.getByText(signInText)).toBeVisible();
+    expect(loginScreen.getByText('login.title')).toBeVisible();
   });
 
   it('adds the screen class to body', () => {

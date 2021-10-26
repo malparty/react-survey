@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import App from '@src/App';
 
@@ -6,6 +6,9 @@ import App from '@src/App';
 // so that we can assert that render is
 // called with <App /> and HTML element with id = root
 jest.mock('react-dom', () => ({ render: jest.fn() }));
+
+// mock i18n import as we do not need translations setup for this test
+jest.mock('@src/i18n', () => ({}));
 
 test('renders with App and root div', () => {
   // Create and append to document body
@@ -21,7 +24,9 @@ test('renders with App and root div', () => {
   // and HTML element with id = root
   expect(ReactDOM.render).toHaveBeenCalledWith(
     <React.StrictMode>
-      <App />
+      <Suspense fallback="loading">
+        <App />
+      </Suspense>
     </React.StrictMode>,
     root
   );
