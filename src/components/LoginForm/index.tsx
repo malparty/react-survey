@@ -1,8 +1,8 @@
 import { PureComponent } from 'react';
 import nimbleLogo from '@assets/images/nimble-logo.png';
-import { Formik, Field, Form, FormikHelpers, FormikErrors, FormikTouched } from 'formik';
+import { Formik, Field, Form, FormikHelpers } from 'formik';
 import * as Yup from 'yup';
-import BaseAlert from '../BaseAlert';
+import LoginFormErrors from './Errors';
 
 export interface LoginFormValues {
   email: string;
@@ -25,21 +25,6 @@ export default class LoginForm extends PureComponent {
     setSubmitting(false);
   }
 
-  getErrorMessages(errors: FormikErrors<LoginFormValues>, touched: FormikTouched<LoginFormValues>): JSX.Element[] {
-    const errorMessages = Reflect.ownKeys(errors).map((key) => {
-      return (
-        Reflect.get(errors, key) &&
-        Reflect.get(touched, key) && <div key={key.toString()}> {Reflect.get(errors, key)}</div>
-      );
-    });
-    return errorMessages.filter((error) => error);
-  }
-
-  renderErrors(errors: FormikErrors<LoginFormValues>, touched: FormikTouched<LoginFormValues>): JSX.Element | null {
-    const errorMessages = this.getErrorMessages(errors, touched);
-    return errorMessages.length > 0 ? <BaseAlert>{errorMessages}</BaseAlert> : null;
-  }
-
   render() {
     return (
       <div className="login-form">
@@ -53,9 +38,9 @@ export default class LoginForm extends PureComponent {
           onSubmit={this.submitLoginForm}
           validationSchema={LoginSchema}
         >
-          {({ errors, touched }) => (
+          {(formData) => (
             <Form>
-              {this.renderErrors(errors, touched)}
+              <LoginFormErrors {...formData} />
               <div className="login-form__field">
                 <label className="login-form__label" htmlFor="email">
                   Email
