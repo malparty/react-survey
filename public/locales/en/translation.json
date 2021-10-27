@@ -1,0 +1,24 @@
+{
+  "base_alert": {
+    "error_title": "Error",
+    "error_icon_alt": "Error sign icon"
+  },
+  "language_switch": {
+    "en": "English",
+    "fr": "French"
+  },
+  "login": {
+    "title": "Sign in to Nimble",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign in",
+    "errors": {
+      "email_required": "Please fill in the email.",
+      "email_invalid": "The provided email has an invalid format.",
+      "password_required": "Please fill in your password.",
+      "password_too_long": "The password cannot be longer than 32 characters.",
+      "password_too_short": "The password should be at least 8 characters long."
+    },
+    "nimble_logo_alt": "Nimble Logo"
+  }
+}

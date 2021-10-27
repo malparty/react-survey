@@ -1,0 +1,31 @@
+.language-switch {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem 0;
+
+  list-style: none;
+
+  * + *::before {
+    content: '|';
+
+    padding: 0 rem(8px);
+
+    opacity: $_text-secondary-opacity;
+  }
+
+  &__link {
+    opacity: $_text-secondary-opacity;
+
+    color: $white;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    &--active {
+      opacity: 1;
+
+      font-weight: $font-weight-bold;
+    }
+  }
+}

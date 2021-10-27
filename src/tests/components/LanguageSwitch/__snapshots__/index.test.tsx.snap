@@ -1,67 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BaseAlert correctly renders 1`] = `
+exports[`LanguageSwitch correctly renders 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="base-alert alert alert-dark"
+      <ul
+        class="language-switch"
       >
-        <div
-          class="base-alert__icon"
-        >
-          <img
-            alt="base_alert.error_icon_alt"
-            src="icon-error.svg"
-          />
-        </div>
-        <div
-          class="base-alert__content"
-        >
-          <h5
-            class="base-alert__content-title"
+        <li>
+          <a
+            class="language-switch__link "
+            href="#en"
           >
-            base_alert.error_title
-          </h5>
-          <div
-            class="base-alert__content-message"
-            data-test-id="base-alert-message"
+            language_switch.en
+          </a>
+        </li>
+        <li>
+          <a
+            class="language-switch__link "
+            href="#fr"
           >
-            An alert message
-          </div>
-        </div>
-      </div>
+            language_switch.fr
+          </a>
+        </li>
+      </ul>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="base-alert alert alert-dark"
+    <ul
+      class="language-switch"
     >
-      <div
-        class="base-alert__icon"
-      >
-        <img
-          alt="base_alert.error_icon_alt"
-          src="icon-error.svg"
-        />
-      </div>
-      <div
-        class="base-alert__content"
-      >
-        <h5
-          class="base-alert__content-title"
+      <li>
+        <a
+          class="language-switch__link "
+          href="#en"
         >
-          base_alert.error_title
-        </h5>
-        <div
-          class="base-alert__content-message"
-          data-test-id="base-alert-message"
+          language_switch.en
+        </a>
+      </li>
+      <li>
+        <a
+          class="language-switch__link "
+          href="#fr"
         >
-          An alert message
-        </div>
-      </div>
-    </div>
+          language_switch.fr
+        </a>
+      </li>
+    </ul>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

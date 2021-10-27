@@ -12,8 +12,10 @@ $black: #000;
 
 $dark: $gray-800;
 
-$body-bg: rgba(0, 0, 0, 0);
+$body-bg: $black;
 $body-color: $white;
+
+$header-height: 6.75rem; // 108px
 
 $zindex-behind: -1;
 
@@ -32,6 +34,10 @@ $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
 $font-weight-bold: 800 !default;
 $font-weight-bolder: 850 !default;
+
+$link-color: $white;
+$link-hover-color: $white;
+$link-decoration: none;
 
 $border-radius: 0.706rem; // 12px
 $btn-border-radius: 0.588rem; // 10px
