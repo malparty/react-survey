@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { requestManager, defaultOptions } from '@src/lib/requestManager';
+import RequestManager from '@src/lib/RequestManager';
 
-describe('requestManager', () => {
+describe('RequestManager', () => {
   const endPoint = 'https://sample-endpoint.com/api/';
 
   it('fetches successfully data from an API', async () => {
@@ -16,7 +16,9 @@ describe('requestManager', () => {
     const postMocked = jest.spyOn(axios, 'request');
     postMocked.mockImplementation(() => Promise.resolve(responseData));
 
-    await expect(requestManager('POST', endPoint)).resolves.toEqual(responseData.data);
+    const requestManager = new RequestManager();
+
+    await expect(requestManager.call('POST', endPoint)).resolves.toEqual(responseData.data);
   });
 
   it('fetches erroneously data from an API', async () => {
@@ -26,17 +28,21 @@ describe('requestManager', () => {
     const postMocked = jest.spyOn(axios, 'request');
     postMocked.mockImplementation(() => Promise.reject(new Error(errorMessage)));
 
-    await expect(requestManager('POST', endPoint)).rejects.toThrow(errorMessage);
+    const requestManager = new RequestManager();
+
+    await expect(requestManager.call('POST', endPoint)).rejects.toThrow(errorMessage);
   });
 
   it('fetches the provided endPoint', async () => {
-    const requestOptions = { ...defaultOptions, method: 'POST', url: endPoint };
+    const requestOptions = { ...RequestManager.defaultOptions, method: 'POST', url: endPoint };
 
     jest.mock('axios');
     const postMocked = jest.spyOn(axios, 'request');
     postMocked.mockImplementation(() => Promise.resolve({}));
 
-    await requestManager('POST', endPoint);
+    const requestManager = new RequestManager();
+
+    await requestManager.call('POST', endPoint);
 
     expect(axios.request).toHaveBeenCalledWith(requestOptions);
   });
