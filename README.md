@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8fe562cd-583e-4c4c-8e25-9a1edffdae96/deploy-status)](https://app.netlify.com/sites/react-survey/deploys)
+
 # React Survey - Nimble Internal Certification
 
 This project is an internal certification proposed by [Nimble](https://nimblehq.co/).\

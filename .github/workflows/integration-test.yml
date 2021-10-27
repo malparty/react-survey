@@ -1,6 +1,6 @@
 name: Cypress Integration Test
 
-on: [push]
+on: push
 
 jobs:
   cypress-run:
