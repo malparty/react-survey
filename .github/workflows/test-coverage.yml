@@ -1,0 +1,18 @@
+name: Test Coverage
+
+on: push
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Jest Coverage report
+        uses: artiomtr/jest-coverage-report-action@v2.0-rc.5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          package-manager: yarn
+          threshold: 80 # prevent PR merge under 80% coverage
