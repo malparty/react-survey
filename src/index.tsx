@@ -4,7 +4,9 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import './i18n';
+import {configureI18n} from './i18n';
+
+configureI18n();
 
 ReactDOM.render(
   <React.StrictMode>

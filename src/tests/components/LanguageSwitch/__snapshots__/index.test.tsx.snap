@@ -11,7 +11,6 @@ Object {
         <li>
           <a
             class="language-switch__link "
-            data-test-id="language-switch-link-en"
             href="#en"
           >
             language_switch.en
@@ -20,7 +19,6 @@ Object {
         <li>
           <a
             class="language-switch__link "
-            data-test-id="language-switch-link-fr"
             href="#fr"
           >
             language_switch.fr
@@ -36,7 +34,6 @@ Object {
       <li>
         <a
           class="language-switch__link "
-          data-test-id="language-switch-link-en"
           href="#en"
         >
           language_switch.en
@@ -45,7 +42,6 @@ Object {
       <li>
         <a
           class="language-switch__link "
-          data-test-id="language-switch-link-fr"
           href="#fr"
         >
           language_switch.fr

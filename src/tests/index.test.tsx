@@ -8,7 +8,7 @@ import App from '@src/App';
 jest.mock('react-dom', () => ({ render: jest.fn() }));
 
 // mock i18n import as we do not need translations setup for this test
-jest.mock('@src/i18n', () => ({}));
+jest.mock('@src/i18n', () => ({ configureI18n: jest.fn() }));
 
 test('renders with App and root div', () => {
   // Create and append to document body
