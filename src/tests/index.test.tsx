@@ -10,6 +10,9 @@ jest.mock('react-dom', () => ({ render: jest.fn() }));
 // mock i18n import as we do not need translations setup for this test
 jest.mock('@src/i18n', () => ({ configureI18n: jest.fn() }));
 
+// mock App to prevent rendering the whole React tree
+jest.mock('@src/App');
+
 test('renders with App and root div', () => {
   // Create and append to document body
   // an HTML element with id = root
