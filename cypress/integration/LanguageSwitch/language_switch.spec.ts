@@ -8,8 +8,8 @@ describe('When a user switch the current language from English to French', () =>
     const frenchLink = cy.findByText('French').click();
 
     expect(frenchLink.contains('Français'));
-  })
-})
+  });
+});
 
 describe('When a user switch back to English after switching to French', () => {
   it('replaces Anglais back to English', () => {
@@ -19,6 +19,5 @@ describe('When a user switch back to English after switching to French', () => {
     const englishLink = cy.findByText('Anglais').click();
 
     expect(englishLink.contains('English'));
-  })
-})
-
+  });
+});

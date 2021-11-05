@@ -1,6 +1,6 @@
 import SignInAdapter from '@src/adapters/oauth/SignInAdapter';
 import RequestManager from '@src/lib/RequestManager';
-jest.mock('@src/lib/RequestManager')
+jest.mock('@src/lib/RequestManager');
 
 describe('SignInAdapter', () => {
   it('calls RequestManager only once', async () => {

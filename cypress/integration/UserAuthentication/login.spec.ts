@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 /// <reference types="@testing-library/cypress" />
+/// <reference types="@testing-library/jest-dom" />
 
 describe('When an unauthenticated user connects to the app', () => {
   const LOGIN_SCREEN_CONTAINER_TEST_ID = 'login-screen-container';

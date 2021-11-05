@@ -1504,10 +1504,10 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@nimblehq/eslint-config-nimble@2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@nimblehq/eslint-config-nimble/-/eslint-config-nimble-2.2.0.tgz#672e18eddfafbc82d91eed05608b532320e8cea1"
-  integrity sha512-zZFGCci/zD4TNlOtUV+6NJwJVMDzUC5gZLsB85UvBdHQRU24lZAtF90KQRj4IsMsZPkj4Z/8Aq1jxyAyDJ4IMA==
+"@nimblehq/eslint-config-nimble@2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@nimblehq/eslint-config-nimble/-/eslint-config-nimble-2.2.1.tgz#99acab175523d72f089b5a7deda13202408357d6"
+  integrity sha512-xguNew/fougXCv2cSf2pgFpV36XIFA0ECDXtu5Tgc6NfIYqcWr8psogIbu/b8PgNI6s1clustYUxO/+4T/CaIA==
   dependencies:
     eslint "5.6.0"
 

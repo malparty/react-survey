@@ -3,28 +3,28 @@ import LoginFormErrors from '@src/components/LoginForm/Errors';
 
 describe('LoginFormErrors', () => {
   const ERROR_MESSAGE_TEST_ID = 'base-alert-message';
-  const invalid_email_message = 'Invalid email';
-  const invalid_password_message = 'Invalid password';
+  const invalidEmailMessage = 'Invalid email';
+  const invalidPasswordMessage = 'Invalid password';
 
   it('has 2 errors when providing 2 errors and 2 touched field', () => {
-    const errors = { email: invalid_email_message, password: invalid_password_message };
+    const errors = { email: invalidEmailMessage, password: invalidPasswordMessage };
     const touched = { email: true, password: true };
     const loginFormErrors = render(<LoginFormErrors errors={errors} touched={touched} />);
 
-    expect(loginFormErrors.getByTestId(ERROR_MESSAGE_TEST_ID)).toHaveTextContent(invalid_email_message);
-    expect(loginFormErrors.getByTestId(ERROR_MESSAGE_TEST_ID)).toHaveTextContent(invalid_password_message);
+    expect(loginFormErrors.getByTestId(ERROR_MESSAGE_TEST_ID)).toHaveTextContent(invalidEmailMessage);
+    expect(loginFormErrors.getByTestId(ERROR_MESSAGE_TEST_ID)).toHaveTextContent(invalidPasswordMessage);
   });
 
   it('has an error when providing 2 errors but only 1 touched field', () => {
-    const errors = { email: invalid_email_message, password: invalid_password_message };
+    const errors = { email: invalidEmailMessage, password: invalidPasswordMessage };
     const touched = { password: true };
     const loginFormErrors = render(<LoginFormErrors errors={errors} touched={touched} />);
 
-    expect(loginFormErrors.getByTestId(ERROR_MESSAGE_TEST_ID)).toHaveTextContent(invalid_password_message);
+    expect(loginFormErrors.getByTestId(ERROR_MESSAGE_TEST_ID)).toHaveTextContent(invalidPasswordMessage);
   });
 
   it('has no error when providing 2 errors but no touched field', async () => {
-    const errors = { email: invalid_email_message, password: invalid_password_message };
+    const errors = { email: invalidEmailMessage, password: invalidPasswordMessage };
     const touched = {};
     const loginFormErrors = render(<LoginFormErrors errors={errors} touched={touched} />);
 
@@ -56,8 +56,8 @@ describe('LoginFormErrors', () => {
   });
 
   it('does NOT display a BaseAlert message when it has no error', () => {
-    const errors = {email:invalid_email_message};
-    const touched = {password: true};
+    const errors = {email: invalidEmailMessage };
+    const touched = {password: true };
     const loginFormErrors = render(<LoginFormErrors errors={errors} touched={touched} />);
 
     expect(loginFormErrors.queryByTestId(ERROR_MESSAGE_TEST_ID)).toBeFalsy();

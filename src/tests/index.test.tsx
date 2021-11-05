@@ -31,6 +31,6 @@ test('renders with App and root div', () => {
         <App />
       </Suspense>
     </React.StrictMode>,
-    root
+    root,
   );
 });

@@ -24,7 +24,7 @@ const LoginForm = () => {
     password: Yup.string()
       .min(8, t('login.errors.password_too_short'))
       .max(32, t('login.errors.password_too_long'))
-      .required(t('login.errors.password_required'))
+      .required(t('login.errors.password_required')),
   });
 
   return (
@@ -34,7 +34,7 @@ const LoginForm = () => {
       <Formik
         initialValues={{
           email: '',
-          password: ''
+          password: '',
         }}
         onSubmit={submitLoginForm}
         validationSchema={LoginSchema}

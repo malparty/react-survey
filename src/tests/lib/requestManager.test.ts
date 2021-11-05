@@ -8,8 +8,8 @@ describe('RequestManager', () => {
     const responseData = {
       data: [
         { id: 1, value: 'first object' },
-        { id: 2, value: 'second object' }
-      ]
+        { id: 2, value: 'second object' },
+      ],
     };
 
     jest.mock('axios');

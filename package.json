@@ -8,7 +8,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
-    "@nimblehq/eslint-config-nimble": "2.2.0",
+    "@nimblehq/eslint-config-nimble": "2.2.1",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
     "@svgr/webpack": "5.5.0",
     "@testing-library/cypress": "8.0.1",
@@ -100,8 +100,12 @@
     "test:coverage": "node scripts/testCoverage.js",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
+    "lint": "eslint ./src ./cypress --ext .ts,.tsx",
+    "lint:fix": "eslint ./src ./cypress --ext .ts,.tsx --fix",
     "stylelint": "stylelint '**/*.scss'",
-    "stylelint:fix": "stylelint '**/*.scss' --fix"
+    "stylelint:fix": "stylelint '**/*.scss' --fix",
+    "codebase:lint": "yarn lint && yarn stylelint",
+    "codebase:fix": "yarn lint:fix && yarn stylelint:fix"
   },
   "eslintConfig": {
     "extends": [
@@ -117,7 +121,8 @@
           "named": "never",
           "asyncArrow": "always"
         }
-      ]
+      ],
+      "jest/valid-expect": "off"
     }
   },
   "browserslist": {

@@ -2,7 +2,7 @@ import axios, { Method as HTTPMethod, ResponseType, AxiosRequestConfig, AxiosRes
 
 class RequestManager {
   static defaultOptions: { responseType: ResponseType } = {
-    responseType: 'json'
+    responseType: 'json',
   };
 
   /**
@@ -20,7 +20,7 @@ class RequestManager {
       method,
       url: endpoint,
       ...RequestManager.defaultOptions,
-      ...requestOptions
+      ...requestOptions,
     };
 
     return axios.request(requestParams).then((response: AxiosResponse<any>) => {
