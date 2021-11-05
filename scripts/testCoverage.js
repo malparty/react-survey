@@ -21,5 +21,6 @@ const execSync = require('child_process').execSync;
 let argv = process.argv.slice(2);
 
 argv.push('--coverage');
+argv.push('--watchAll');
 
 jest.run(argv);

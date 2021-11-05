@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8fe562cd-583e-4c4c-8e25-9a1edffdae96/deploy-status)](https://app.netlify.com/sites/react-survey/deploys)
+
 # React Survey - Nimble Internal Certification
 
 This project is an internal certification proposed by [Nimble](https://nimblehq.co/).\
@@ -14,6 +16,13 @@ It enables me to level up with React and more (OAuth2.0, local application data,
 `git clone git@github.com:malparty/react-survey.git`
 
 > ℹ️ This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### Setup env
+
+For local run, rename `example.env.local` into `.env.local` and assign the values.
+See the [API wiki](https://github.com/nimblehq/nimble-survey-web/wiki) to get an API client id and secret.
+
+For staging and production, configure the server with secrets from the environment variables listed in the above file.
 
 ### Watch
 

@@ -1,4 +1,5 @@
 import { PureComponent } from 'react';
+import LoginForm from '@src/components/LoginForm';
 
 const LOGIN_SCREEN_CLASS = 'login-screen';
 
@@ -17,9 +18,7 @@ export default class LoginScreen extends PureComponent {
     return (
       <div className="login-screen__grid">
         <div className="login-screen__container" data-test-id="login-screen-container">
-          Sign in to Nimble
-          <div>Email</div>
-          <div>Password</div>
+          <LoginForm />
         </div>
       </div>
     );

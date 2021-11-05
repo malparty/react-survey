@@ -1,0 +1,24 @@
+{
+  "base_alert": {
+    "error_title": "Erreur",
+    "error_icon_alt": "Icone indiquant une erreur"
+  },
+  "language_switch": {
+    "en": "Anglais",
+    "fr": "Français"
+  },
+  "login": {
+    "title": "Se connecter à Nimble",
+    "email": "Email",
+    "password": "Mot de passe",
+    "submit": "Se connecter",
+    "errors": {
+      "email_required": "Veuillez saisir votre email.",
+      "email_invalid": "L'email saisi n'est pas valid.",
+      "password_required": "Veuillez saisir votre mot de passe.",
+      "password_too_long": "Le mot de passe ne doit pas dépasser les 32 caractères.",
+      "password_too_short": "Le mot de passe doit faire au minimum 8 caractères."
+    },
+    "nimble_logo_alt": "Logo de Nimble"
+  }
+}
